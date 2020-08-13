@@ -1,0 +1,20 @@
+<%- include('partials/header') %> 
+
+
+<div class="container-fluid">
+    <div class="col-8 offset-2 border rounded">
+    <img src="<%= blog.image %> " class="card-img-top rounded mt-2" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= blog.title %></h5>
+      <p class="card-text"><%= blog.body %></p>
+      <p class="card-text"><small class="text-muted"><%= blog.created.toDateString() %></small></p>
+    </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<%- include('partials/footer') %> 
