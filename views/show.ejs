@@ -6,10 +6,15 @@
     <img src="<%= blog.image %> " class="card-img-top rounded mt-2" alt="...">
   <div class="card-body">
     <h5 class="card-title"><%= blog.title %></h5>
-    <p class="card-text"><%= blog.body %></p>
+    <p class="card-text"><%- blog.body %></p> <!-- takes in html -->
     <p class="card-text"><small class="text-muted"><%= blog.created.toDateString() %></small></p>
   </div>
-    <a class="btn btn-warning btn-block mb-2" href="/blogs/<%= blog._id %>/edit">Edit</a>
+  <div class="d-flex justify-content-start mb-2">
+    <a class="btn btn-warning px-4 mr-2" href="/blogs/<%= blog._id %>/edit">Edit</a>
+    <form action="/blogs/<%= blog._id %>?_method=DELETE " method="POST">
+      <button class="btn btn-danger px-3">Delete</button>
+    </form>
+  </div>
   </div>
 </div>
 
