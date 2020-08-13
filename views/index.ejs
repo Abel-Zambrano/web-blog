@@ -11,8 +11,10 @@
         <div class="card-body">
           <h5 class="card-title"><%= blog.title %></h5>
           <p class="card-text"><%= blog.body.substring(0,30) %>....</p>
-          <a href="/blogs/<%= blog._id %>" class="btn btn-primary">Read More</a>
           <p class="card-text"><small class="text-muted"><%= blog.created.toDateString() %></small></p>
+        </div>
+        <div class="mb-2">
+          <a href="/blogs/<%= blog._id %>" class="btn btn-primary btn-block">Read More</a>
         </div>
       </div>
     <% }); %>
