@@ -6,7 +6,9 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override')
 
 //APP CONFIG
-mongoose.connect('mongodb://localhost/blog_app', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://localhost/blog_app', { useNewUrlParser: true, useUnifiedTopology: true });
+
+mongoose.connect('mongodb+srv://admin-abel:admin123@cluster0.yxzhg.mongodb.net/blog_db?retryWrites=true&w=majority')
 mongoose.set('useFindAndModify', false);
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
